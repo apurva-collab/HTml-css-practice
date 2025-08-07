@@ -1,0 +1,75 @@
+* {
+  margin: 0;   /* Universal selector which removes extra spacing */
+  padding: 0;
+ box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;     /* 100 percent of view port height */
+  background: linear-gradient(to right, #141e30, #243b55); 
+  display: flex;   /*This will make all the items inside go next to each other horizontally, instead of stacking vertically.*/
+  align-items: center;      /*aligns items Top ↕ Bottom*/
+  justify-content: center;  /*aligns items Left ↔ Right*/
+}
+
+.login-container {
+  background-color: white;
+  padding: 40px;   /*px is fix padding and percent changes with respect to width*/
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(202, 3, 3, 0.3);
+  width: 550px;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0fbedd;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #243b55;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #141e30;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #243b55;
+  text-decoration: none;
+  font-weight: bold;
+}
