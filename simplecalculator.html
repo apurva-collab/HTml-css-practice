@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: aqua;
+      background: linear-gradient(to right, #0bc3db, #03778b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }    
+      input,
+      select,
+      button {
+      margin: 5px;
+      padding: 8px;
+      font-size: 16px;
+    }
+    h1 {
+      color: red;
+      background-color: grey;
+      display: flex;
+    }
+    p {
+      color: #1F51FF;
+      font-size: 50px;
+    }
+    input {
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    input::placeholder {
+      color: grey;
+      transition: 0.3s;
+    }
+    input:hover::placeholder {
+      color: hotpink;
+    }
+    input:hover {
+      border-color: hotpink;
+    }
+    button {
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: hotpink;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .box {
+      width: 400px;
+      height: 600px;
+      background-color: lightblue;
+      border: 2px solid black;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .box h1 {
+      color: red;
+      background-color: grey;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .button-grp {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Simple Calculator</h1>
+    <input id="num1" placeholder="First number">
+    <input id="num2" placeholder="Second number">
+    <div class="button-grp">
+      <button onclick="add ()">Add</button>
+      <button onclick="divide ()">Divide</button>
+      <button onclick="mul ()">Multiply</button>
+      <button onclick="sub ()">Subtract</button>
+      <button onclick="square ()">Square</button>
+      <button onclick="cube ()">Cube</button>
+      <button onclick="table ()">table</button>
+    </div>
+    <p>Result: <span id="result"></span></p>
+  </div>
+  <script>
+    function add() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+      let sum = a + b;
+      document.getElementById("result").textContent = sum;
+    }
+
+    function divide() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+      if (b === 0) {
+        document.getElementById("result").textContent = "Cannot divide by 0";
+      } else {
+        let div = a / b;
+        document.getElementById("result").textContent = div;
+      }
+    }
+    function mul() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+      let mul = a * b;
+      document.getElementById("result").textContent = mul;
+    }
+    function sub() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+      let sub = a - b;
+      document.getElementById("result").textContent = sub;
+    }
+    function square() {
+      let a = Number(document.getElementById("num1").value);
+      let square = a * a;
+      document.getElementById("result").textContent = square;
+    }
+    function cube() {
+      let a = Number(document.getElementById("num1").value);
+      let cube = a * a * a;
+      document.getElementById("result").textContent = cube;
+    }
+    function table() {
+        let a = Number(document.getElementById("num1").value);
+        let output =" "
+      for (let i = 1; i <= 10; i++) {
+        output += (a * i) + " , ";
+      }
+      document.getElementById("result").textContent = output;
+    }
+  </script>
+</body>
+</html>
